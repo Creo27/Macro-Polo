@@ -14,7 +14,6 @@ class MacroPoloApp:
         self.t1 = self.window.findChild(QtWidgets.QTableWidget, 't1')
         self.t1.setHorizontalHeaderLabels(['Key', 'Value'])
 
-
         self.cursor.execute("SELECT Key, Value FROM binds")
         rows = self.cursor.fetchall()
         self.t1.setRowCount(len(rows))
